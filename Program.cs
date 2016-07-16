@@ -4,19 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace E_ATM
+static class Program
 {
-    static class Program
+    /// <summary>
+    /// Главная точка входа для приложения.
+    /// </summary>
+    [STAThread]
+    static void Main()
     {
-        /// <summary>
-        /// Главная точка входа для приложения.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-        }
+        UserDB.Registration("123", "123");
+        UserDB.Registration("Zoya", "1");
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new E_ATM.Login());
     }
 }
