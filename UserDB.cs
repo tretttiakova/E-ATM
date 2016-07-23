@@ -4,7 +4,7 @@ using System;
 static class UserDB
 {
     static HashSet<User> users = new HashSet<User>();
-
+    public static User cur_user;
     public static User FindUser(string name)
     {
         foreach (var a in users)

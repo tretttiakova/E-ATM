@@ -16,7 +16,7 @@ class User
         this.password = password;
     }
 
-    public void retrieve(int sum)
+    public void withdraw(int sum)
     {
         if (retrievability(sum))
         {
@@ -26,7 +26,7 @@ class User
         MessageBox.Show("No enough money", "ERROR");
     }
 
-    public void remmitance(int sum, string payee) //?
+    public void transfer(int sum, string payee) //?
     {
         if (!retrievability(sum))
             MessageBox.Show("No enough money", "ERROR");

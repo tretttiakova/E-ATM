@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace E_ATM
 {
-    public partial class Withdraw : Form
+    public partial class Deposit_form : Form
     {
-        
-        public Withdraw()
+        public Deposit_form()
         {
             InitializeComponent();
         }
-        
-        private void doneWithdrawButton_Click(object sender, EventArgs e)
+
+        private void depositButton_Click(object sender, EventArgs e)
         {
-            UserDB.cur_user.withdraw((int)withdrawAmount.Value);
+            UserDB.cur_user.deposit((int)depositAmount.Value);
             this.Close();
         }
     }

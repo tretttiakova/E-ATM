@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Deposit_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deposit_form.Designer.cs">
+      <DependentUpon>Deposit_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="LK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Withdraw.Designer.cs">
       <DependentUpon>Withdraw.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Deposit_form.resx">
+      <DependentUpon>Deposit_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LK.resx">
       <DependentUpon>LK.cs</DependentUpon>
     </EmbeddedResource>
