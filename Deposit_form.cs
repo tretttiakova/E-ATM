@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace E_ATM
 {
-    public partial class Deposit_form : Form
+    public partial class DepositForm : Form
     {
-        public Deposit_form()
+        public DepositForm()
         {
             InitializeComponent();
         }
@@ -20,6 +20,7 @@ namespace E_ATM
         private void depositButton_Click(object sender, EventArgs e)
         {
             UserDB.cur_user.deposit((int)depositAmount.Value);
+            LK.instance.UpdateBalanceLabel();
             this.Close();
         }
     }

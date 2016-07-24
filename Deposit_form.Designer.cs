@@ -1,6 +1,6 @@
 ﻿namespace E_ATM
 {
-    partial class Deposit_form
+    partial class DepositForm
     {
         /// <summary>
         /// Required designer variable.

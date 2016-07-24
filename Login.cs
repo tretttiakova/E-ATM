@@ -32,6 +32,7 @@ namespace E_ATM
                 this.Hide();
                 nameBox.Text = "";
                 passwordBox.Text = "";
+                LK.instance.UpdateBalanceLabel();
             }
             else
             {

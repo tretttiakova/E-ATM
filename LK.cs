@@ -12,10 +12,11 @@ namespace E_ATM
 {
     public partial class LK : Form
     {
-        
+        public static LK instance;
         public LK()
         {
             InitializeComponent();
+            instance = this;
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -34,19 +35,17 @@ namespace E_ATM
             form.Show();
             form.Location = this.Location;
             form.StartPosition = FormStartPosition.Manual;
-            UpdateBalanceLabel();
         }
 
         private void depositButton_Click(object sender, EventArgs e)
         {
-            var form = new Deposit_form();
+            var form = new DepositForm();
             form.Show();
             form.Location = this.Location;
             form.StartPosition = FormStartPosition.Manual;
-            UpdateBalanceLabel();
         }
 
-        private void UpdateBalanceLabel ()
+        public void UpdateBalanceLabel ()
         {
             //string balance = Convert.ToString(UserDB.cur_user.currentBalance);
             balanceLabel.Text = UserDB.cur_user.currentBalance.ToString();

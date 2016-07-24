@@ -21,6 +21,7 @@ namespace E_ATM
         private void doneWithdrawButton_Click(object sender, EventArgs e)
         {
             UserDB.cur_user.withdraw((int)withdrawAmount.Value);
+            LK.instance.UpdateBalanceLabel();
             this.Close();
         }
     }
