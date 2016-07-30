@@ -16,6 +16,10 @@ static class UserDB
     }
     public static void LoadUsers ()
     {
+        if (!File.Exists("users.txt"))
+        {
+            return;
+        }
         FileStream file = new FileStream("users.txt", FileMode.Open, FileAccess.Read);
         StreamReader reader = new StreamReader(file);
         while (!reader.EndOfStream)
